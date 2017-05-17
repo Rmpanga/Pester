@@ -40,12 +40,12 @@ InModuleScope Pester {
         Context "TestNameFilter and TagFilter parameter is set" {
             $p = new-pesterstate -TagFilter "tag","tag2" -testnamefilter "filter"
 
-            it "sets the TestNameFilter property" {
+            it "sets the TagFilter property" {
                 $p.TagFilter | should be ("tag","tag2")
             }
 
             it "sets the TestNameFilter property" {
-                $p.TagFilter | should be ("tag","tag2")
+                $p.TestNameFilter | should be ("filter")
             }
 
         }
